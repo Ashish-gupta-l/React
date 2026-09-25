@@ -23,14 +23,14 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: 05passwordgenerator/package-lock.json
+          cache-dependency-path: 05passwordGenerator/package-lock.json
 
       - name: Install dependencies
-        working-directory: 05passwordgenerator
+        working-directory: 05passwordGenerator
         run: npm ci
 
       - name: Build
-        working-directory: 05passwordgenerator
+        working-directory: 05passwordGenerator
         run: npm run build
 
       - name: Setup Pages
@@ -39,7 +39,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 05passwordgenerator/dist
+          path: 05passwordGenerator/dist
 
       - name: Deploy
         uses: actions/deploy-pages@v4
