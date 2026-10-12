@@ -1,0 +1,21 @@
+import { useState } from 'react'
+import heroImg from './assets/hero.png'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import './App.css'
+import AddTodo from './components/AddTodo'
+import Todo from './components/Todo'
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      <h1>Learn about Redux</h1>
+      <AddTodo/>
+      <Todo/>
+    </>
+  )
+}
+
+export default App
