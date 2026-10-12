@@ -12,7 +12,7 @@ function Todo() {
         <div>Todos</div>
         {todos.map(todo => (
             <li key={todo.id} className='w-8 '>
-                {todos.text}
+                {todo.text}
                 <button
                 onClick={() => dispatch(removeTodo(todo.id))}
                 >X</button>
